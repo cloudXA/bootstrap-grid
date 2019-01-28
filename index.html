@@ -37,6 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"> <span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
             </div>
+    <!-- modal触发器 -->
             <span class="navbar-text">
                 <a data-toggle="modal" data-target="#loginModal">
                     <span class="fa fa-sign-in"></span> Login
@@ -75,6 +76,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-sm ml-auto "data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
@@ -85,7 +87,78 @@
             </div>
 
         </div>        
-    </div>            
+    </div>   
+<!-- modal中row的上下空隙不足  solved-->
+
+    <div id="submitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>  
+            
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="col-sm-2 col-12">
+                            Number of Guests
+                        </div>
+                        <div class="col-sm col-12">
+                            <input type="checkbox">1
+                            <input type="checkbox">2 
+                            <input type="checkbox">3
+                            <input type="checkbox">4
+                            <input type="checkbox">5
+                            <input type="checkbox">6
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <div class="col-sm-2 col-12">
+                            Section
+                        </div>
+                        <div class="btn-group btn-group-toggle col-sm col-12" data-toggle="buttons">
+                            <label class="btn btn-success active">
+                              <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                            </label>
+                            <label class="btn btn-warning">
+                              <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                            </label>                            
+                        </div>    
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <div class="col-sm-2 col-12">
+                            Data and Time
+                        </div>
+                        <div class="form-group col-sm col-12">
+                            <input type="password" class="col-sm-4" id="exampleInputPassword3" placeholder="Data">
+                            <input type="password" class="col-sm-4" id="exampleInputPassword3" placeholder="Time">
+                         </div>
+                    </div>  
+ <!-- cancel 和 submit没有center -->
+                    <div class="form-row align-self-center">
+                        <button type="button" class="btn btn-secondary btn-sm  "data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm ">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+     </div>                  
+                                   
+                                
+                            
+                            
+                       
+                    
+                             
+                    
+
+   
+    
 
             
 
@@ -101,10 +174,14 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-<!-- 悬停hover tooltip弹出补充说明             -->
-                <div class="col-12 col-sm align-self-center ">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+958 126565958</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a>
-                </div>
+<!-- 悬停hover tooltip弹出补充说明            history -->
+<!-- 触发器modal -->
+                <span class="navbar-text">
+                    <a role= "button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#submitModal">
+                        Reserve Table
+                    </a>
+                </span>
+                
             </div>
         </div>
     </header>
@@ -295,11 +372,7 @@
     <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+   
 </body>
     
 
