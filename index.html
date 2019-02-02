@@ -39,7 +39,10 @@
             </div>
     <!-- modal触发器 -->
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+        <!-- 替换掉data-toggle 和 data-target,以使用原生JavaScript代码 -->
+
+                <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                <a id="login">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -177,7 +180,8 @@
 <!-- 悬停hover tooltip弹出补充说明            history -->
 <!-- 触发器modal -->
                 <span class="navbar-text">
-                    <a role= "button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#submitModal">
+<!-- 替换掉data-toggle 、data-target -->
+                    <a role= "button" class="btn btn-block nav-link btn-warning" id="reserve" >
                         Reserve Table
                     </a>
                 </span>
@@ -348,6 +352,22 @@
         });
        });
        
+    </script>
+    <!-- login 的JavaScript代码 -->
+    <script>
+        $(document).ready(function() {
+            $('#login').click(function(){
+                $('#loginModal').modal('toggle');
+            })
+        });
+    </script>
+    <!-- reserve a button 的JavaScript代码 -->
+    <script>
+        $(document).ready(function() {
+            $('#reserve').click(function(){
+                $('#submitModal').modal('toggle');
+            })
+        });
     </script>
    
 </body>
