@@ -7,5 +7,6 @@
 图1.2 页面弹出
 ![alt text](https://github.com/cloudXA/bootstrap-grid/blob/master/%E9%99%84%E4%BB%B6/popUp.png)
 
+
 图1.3 页面响应式
 ![alt text](https://github.com/cloudXA/bootstrap-grid/blob/master/%E9%99%84%E4%BB%B6/responsive.png)
